@@ -20,6 +20,10 @@ use the following functions to output the css/js. The helper function will handl
 
 Vite streams from the `/src/main.js` file. As long as you write your code there, or import it there, vite will know about it and will stream those changes to the browser.
 
+## php and html
+
+Vite is configured to watch for changes to .php and .html files. It will hard-refresh the browser if these files change.
+
 ## Gotchas
 
 Both CodeIgniter and Vite have a special folder called `/public`, but they behave differently. I have reconfigured the vite public folder to `vite_public`.
