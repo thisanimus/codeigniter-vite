@@ -3,10 +3,26 @@
 ## Helper
 
 The vite helper is at: `/app/Helpers/vite_helper.php`
+Add `'vite'` to the Codeigniter Autoload::helpers: `/app/Config/Autoload.php`
+
+## env
+
+The helper assumes the following env vars in a .env file:
+
+```
+VITE_OUTPUT_DIR=public/dist
+VITE_OUTPUT_BASEURI=/dist
+VITE_ENTRY_POINT=src/main.js
+VITE_PROTOCOL=http
+VITE_HOST=localhost
+VITE_PORT=3000
+```
+
+##
 
 ### Helper usage
 
-use the following functions to output the css/js. The helper function will handle all the logic for checking if vite is running. If it is, it will serve the vite script, if not, it will serve the production assets.
+Use the following functions to output the css/js. The helper function will handle all the logic for checking if vite is running. If it is, it will serve the vite script, if not, it will serve the production assets.
 
 ```php
 <?= vite_css(); ?>
